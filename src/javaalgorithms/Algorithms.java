@@ -37,11 +37,11 @@ public class Algorithms<K extends Comparable <? super K >> {
         while (true) {
             while (list.get(++left_pointer).compareTo(pivotElement) < 0);
             while (right_pointer > 0 && list.get(--right_pointer).compareTo(pivotElement) > 0);
-            if (left_pointer >= right_pointer) {
+            if (left_pointer >= right_pointer) 
                 break;
-            } else {
+            else 
                 Swap.swapValues(list, left_pointer, right_pointer);
-            }
+            
         }
         Swap.swapValues(list, left_pointer, right);
         return left_pointer;
