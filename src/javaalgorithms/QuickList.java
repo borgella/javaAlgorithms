@@ -276,8 +276,7 @@ public class QuickList<K, V> {
                 add(link.key, link.value);
                 --size;
             } else if (link != second_head) {
-                Link<K, V> previous = previousLink(clef, element);
-                previous.next = previous.next.next;
+                previousLink(clef, element).next = previousLink(clef, element).next.next;
                 add(link.key, link.value);
                 --size;
             }
